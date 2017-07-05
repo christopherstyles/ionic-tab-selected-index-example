@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TabStore } from '../../state/TabStore';
 
-import { TabsPage } from '../tabs/tabs';
+// import { TabsPage } from '../tabs/tabs';
 
 @Component({
   selector: 'page-home',

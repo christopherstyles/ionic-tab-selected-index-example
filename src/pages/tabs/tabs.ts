@@ -12,7 +12,7 @@ export class TabsPage {
   public index: number = 0;
 
   tab1Root = HomePage;
-  tab3Root = PostsPage;
+  tab2Root = PostsPage;
 
   constructor(private tabStore: TabStore) {
     this.tabStore.index.subscribe((value) => {
