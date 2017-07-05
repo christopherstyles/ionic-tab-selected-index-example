@@ -1,19 +1,23 @@
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
+import { TabStore } from '../../state/TabStore';
+
 import { HomePage } from '../home/home';
+import { PostsPage } from '../posts/posts';
 
 @Component({
-  templateUrl: 'tabs.html'
+  templateUrl: 'tabs.html',
 })
 export class TabsPage {
+  public index: number = 0;
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  tab3Root = PostsPage;
 
-  constructor() {
-
+  constructor(private tabStore: TabStore) {
+    this.tabStore.index.subscribe((value) => {
+      console.log('index', value)
+      this.index = value;
+    });
   }
 }
