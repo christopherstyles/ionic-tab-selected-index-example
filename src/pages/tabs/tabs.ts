@@ -9,7 +9,7 @@ import { PostsPage } from '../posts/posts';
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
-  public index: number = 0;
+  index: number = 0;
 
   tab1Root = HomePage;
   tab2Root = PostsPage;
@@ -19,5 +19,9 @@ export class TabsPage {
       console.log('index', value)
       this.index = value;
     });
+  }
+
+  getIndex() {
+    return this.index;
   }
 }
